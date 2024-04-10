@@ -8,14 +8,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/ListFieldRandomPoints"
-          element={<ListFieldRandomPoints />}
-        />
-        <Route
-          path="/ExcelRandomPointsList"
-          element={<ExcelRandomPointsList />}
-        />
+        <Route path="/field" element={<ListFieldRandomPoints />} />
+        <Route path="/excel" element={<ExcelRandomPointsList />} />
       </Routes>
     </BrowserRouter>
   );

@@ -2,95 +2,95 @@ import axios from "axios";
 
 // Get list of Subscriber
 
-const BASE_URL1 =
-  "https://100085.pythonanywhere.com/uxlivinglab/newsletter/v1/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/?type=subscriberlist";
+// const BASE_URL1 =
+//   "https://100085.pythonanywhere.com/uxlivinglab/newsletter/v1/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/?type=subscriberlist";
 
-const apiService = axios.create({
-  baseURL: BASE_URL1,
-});
+// const apiService = axios.create({
+//   baseURL: BASE_URL1,
+// });
 
-export const fetchEndpoints = (data) => async () => {
-  try {
-    const response = await apiService.post(`${BASE_URL1}`, data);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching endpoints:", error);
-    throw error;
-  }
-};
+// export const fetchEndpoints = (data) => async () => {
+//   try {
+//     const response = await apiService.post(`${BASE_URL1}`, data);
+//     return response.data;
+//   } catch (error) {
+//     console.error("Error fetching endpoints:", error);
+//     throw error;
+//   }
+// };
 
 // Subscribe to newsletters
-const BASE_URL_newsletters =
-  "https://100085.pythonanywhere.com/uxlivinglab/newsletter/v1/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/?type=subscribe";
+// const BASE_URL_newsletters =
+//   "https://100085.pythonanywhere.com/uxlivinglab/newsletter/v1/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/?type=subscribe";
 
-const newslettersApiService = axios.create({
-  baseURL: BASE_URL_newsletters,
-});
+// const newslettersApiService = axios.create({
+//   baseURL: BASE_URL_newsletters,
+// });
 
-export const fetchNewslettersEndpoints = (newslettersData) => async () => {
-  try {
-    const response = await newslettersApiService.post(
-      `${BASE_URL_newsletters}`,
-      newslettersData
-    );
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching endpoints:", error);
-    throw error;
-  }
-};
+// export const fetchNewslettersEndpoints = (newslettersData) => async () => {
+//   try {
+//     const response = await newslettersApiService.post(
+//       `${BASE_URL_newsletters}`,
+//       newslettersData
+//     );
+//     return response.data;
+//   } catch (error) {
+//     console.error("Error fetching endpoints:", error);
+//     throw error;
+//   }
+// };
 
 // Unsubscribe to newsletters
 
-const BASE_URL_Unsubscribe_newsletters =
-  "https://100085.pythonanywhere.com/uxlivinglab/newsletter/v1/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/?type=unsubscribe";
+// const BASE_URL_Unsubscribe_newsletters =
+//   "https://100085.pythonanywhere.com/uxlivinglab/newsletter/v1/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/?type=unsubscribe";
 
-const Unsubscribe_newslettersApiService = axios.create({
-  baseURL: BASE_URL_newsletters,
-});
+// const Unsubscribe_newslettersApiService = axios.create({
+//   baseURL: BASE_URL_newsletters,
+// });
 
-export const fetchUnsubscribeNewslettersEndpoints =
-  (newslettersData) => async () => {
-    try {
-      const response = await Unsubscribe_newslettersApiService.post(
-        `${BASE_URL_Unsubscribe_newsletters}`,
-        newslettersData
-      );
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching endpoints:", error);
-      throw error;
-    }
-  };
+// export const fetchUnsubscribeNewslettersEndpoints =
+//   (newslettersData) => async () => {
+//     try {
+//       const response = await Unsubscribe_newslettersApiService.post(
+//         `${BASE_URL_Unsubscribe_newsletters}`,
+//         newslettersData
+//       );
+//       return response.data;
+//     } catch (error) {
+//       console.error("Error fetching endpoints:", error);
+//       throw error;
+//     }
+//   };
 // Distribute Newsletters
 
-const BASE_URL_Distribute_newsletters =
-  "https://100085.pythonanywhere.com/uxlivinglab/newsletter/v1/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/?type=distribute";
+// const BASE_URL_Distribute_newsletters =
+//   "https://100085.pythonanywhere.com/uxlivinglab/newsletter/v1/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/?type=distribute";
 
-const Distribute_newslettersApiService = axios.create({
-  baseURL: BASE_URL_newsletters,
-});
+// const Distribute_newslettersApiService = axios.create({
+//   baseURL: BASE_URL_newsletters,
+// });
 
-export const fetchDistributeNewslettersEndpoints =
-  (newslettersData) => async () => {
-    try {
-      const response = await Distribute_newslettersApiService.post(
-        `${BASE_URL_Distribute_newsletters}`,
-        newslettersData
-      );
-      return response.data;
-    } catch (error) {
-      console.error("Error fetching endpoints:", error);
-      throw error;
-    }
-  };
+// export const fetchDistributeNewslettersEndpoints =
+//   (newslettersData) => async () => {
+//     try {
+//       const response = await Distribute_newslettersApiService.post(
+//         `${BASE_URL_Distribute_newsletters}`,
+//         newslettersData
+//       );
+//       return response.data;
+//     } catch (error) {
+//       console.error("Error fetching endpoints:", error);
+//       throw error;
+//     }
+//   };
 
 // DoWell-Random-graph API fetch data
-const randomPointsURL =
-  "http://100022.pythonanywhere.com/v2/fieldrp/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/";
-const randomPointsApiService = axios.create({
-  baseURL: randomPointsURL,
-});
+// const randomPointsURL =
+//   "http://100022.pythonanywhere.com/v2/fieldrp/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/";
+// const randomPointsApiService = axios.create({
+//   baseURL: randomPointsURL,
+// });
 
 export const fetchRandomPoints = (pointData) => async () => {
   try {
@@ -129,11 +129,11 @@ export const fetchRandomPoints = (pointData) => async () => {
   }
 };
 
-const randomExcelPointsURL =
-  "http://100022.pythonanywhere.com/v2/excelrp/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/";
-const randomExcelPointsApiService = axios.create({
-  baseURL: randomExcelPointsURL,
-});
+// const randomExcelPointsURL =
+//   "http://100022.pythonanywhere.com/v2/excelrp/e532096f-6cb1-4dbf-b6f8-a5b9767d6c8e/";
+// const randomExcelPointsApiService = axios.create({
+//   baseURL: randomExcelPointsURL,
+// });
 
 export const fetchExcelRandomPoints = (ExcelpointData) => async () => {
   try {
@@ -174,10 +174,10 @@ export const fetchExcelRandomPoints = (ExcelpointData) => async () => {
   }
 };
 export default {
-  fetchEndpoints,
-  fetchNewslettersEndpoints,
-  fetchUnsubscribeNewslettersEndpoints,
-  fetchDistributeNewslettersEndpoints,
+  // fetchEndpoints,
+  // fetchNewslettersEndpoints,
+  // fetchUnsubscribeNewslettersEndpoints,
+  // fetchDistributeNewslettersEndpoints,
   fetchRandomPoints,
   fetchExcelRandomPoints,
 };
