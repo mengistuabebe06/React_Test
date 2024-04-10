@@ -1,19 +1,23 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import ListFieldRandomPoints from "./components/RandomgraphComponets/ListFieldRandomPoints";
+import ExcelRandomPointsList from "./components/RandomgraphComponets/ExcelRandomPointsList";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div></div>
-
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/ListFieldRandomPoints"
+          element={<ListFieldRandomPoints />}
+        />
+        <Route
+          path="/ExcelRandomPointsList"
+          element={<ExcelRandomPointsList />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
