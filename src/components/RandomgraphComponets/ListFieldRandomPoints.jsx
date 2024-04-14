@@ -21,10 +21,8 @@ const ListFieldRandomPoints = () => {
     const fetchData = async () => {
       try {
         const pointData = {
-          side: 100,
+          side: 10,
           selection: 5,
-          choice: 0,
-          value: 10,
         };
         const {
           success,

@@ -21,8 +21,10 @@ const ExcelRandomPointsList = () => {
     const fetchData = async () => {
       try {
         const pointData = {
-          side: 10,
+          side: 100,
           selection: 5,
+          choice: 0,
+          value: 10,
         };
         const {
           success,
