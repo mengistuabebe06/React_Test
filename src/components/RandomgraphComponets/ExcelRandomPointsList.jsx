@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { fetchRandomPoints } from "../../apiService";
+import { fetchExcelRandomPoints, fetchRandomPoints } from "../../apiService";
 import { Scatter } from "react-chartjs-2";
 import styled from "styled-components";
 import { Chart, registerables } from "chart.js";
@@ -30,7 +30,7 @@ const ExcelRandomPointsList = () => {
           success,
           response: responseData,
           error,
-        } = await fetchRandomPoints(pointData)();
+        } = await fetchExcelRandomPoints(pointData)();
         if (success && responseData.listOfPoints) {
           setPointsData(responseData.listOfPoints.map(([x, y]) => ({ x, y })));
         } else {
