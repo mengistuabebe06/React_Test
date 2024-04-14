@@ -3,6 +3,7 @@ import { fetchRandomPoints } from "../../apiService";
 import { Scatter } from "react-chartjs-2";
 import styled from "styled-components";
 import { Chart, registerables } from "chart.js";
+import { NavLink } from "react-router-dom";
 Chart.register(...registerables);
 
 const ChartWrapper = styled.div`
@@ -74,9 +75,16 @@ const ListFieldRandomPoints = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <ChartWrapper>
-      <Scatter data={chartData} options={chartOptions} />
-    </ChartWrapper>
+    <div>
+      <ChartWrapper>
+        <Scatter data={chartData} options={chartOptions} />
+      </ChartWrapper>
+      <div className="link-container">
+        <NavLink to="/excel" className="link">
+          Visual Excel Point Data
+        </NavLink>
+      </div>
+    </div>
   );
 };
 

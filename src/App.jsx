@@ -6,12 +6,12 @@ import ExcelRandomPointsList from "./components/RandomgraphComponets/ExcelRandom
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route path="/field" element={<ListFieldRandomPoints />} />
+        <Route path="/" element={<ListFieldRandomPoints />} />
         <Route path="/excel" element={<ExcelRandomPointsList />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
