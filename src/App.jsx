@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import ListFieldRandomPoints from "./components/RandomgraphComponets/ListFieldRandomPoints";
 import ExcelRandomPointsList from "./components/RandomgraphComponets/ExcelRandomPointsList";
